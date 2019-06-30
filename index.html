@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  body{
+  	background-color: #ffbf80;
+      }
+  h1{
+  	color : white;
+      text-align: center;
+      font-size:50px;
+      }
+  p{
+  	color: #cc6600;
+    text-align: center;
+  	font-family: verdana;
+      font-size:22px;
+      }
+  #box1{
+    color: #ffeecc;
+    border:1px solid;
+    text-align: center;
+    padding: 22px;
+    box-shadow: 5px 10px #ffeecc;
+  }
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <title>채팅</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script>
+      $(function() {
+        $('.btn1').click(function(){
+          $('.btn').show();
+        });
+        $('.btn2').click(function(){
+          $('.btn').hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Example 5</h1>
+    <div id="box1">
+      <p><a href="http://www.eswcontest.com/htm/main.php"target="_blank"> 임베디드 소프트웨어 경진대회</a></p>
+    </div>
+    <p>
+    <strong><u>스마트홈 부문</u></strong><br>1등ㄱㄱ</p>
+    <button class="btn1" style="padding:10px">show</button>
+    <button class="btn2" style="padding:10px">hide</button>
+    <div class="btn"><img src="iamgroot.jpg" width="100%"></div>
+
+    <div id="main">
+      <div id="chat">
+        <!-- 채팅 메시지 영역 -->
+      </div>
+      <div>
+        <input type="text" id="test" placeholder="메시지를 입력해주세요..">
+        <button onclick="send()">전송</button>
+      </div>
+    </div>
+  </body>
+</html>
